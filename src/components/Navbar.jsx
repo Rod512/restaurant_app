@@ -37,7 +37,7 @@ const Navbar = () => {
                   <li key={menu.id}>
                     <a
                       href={menu.link}
-                      className="inline-block py-4 px-4 hover:text-yellow-500"
+                      className="text-xl py-4 px-4 hover:text-yellow-500"
                     >
                       {menu.name}
                     </a>
