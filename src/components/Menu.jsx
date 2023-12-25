@@ -4,7 +4,7 @@ import axios from 'axios';
 const Menu = () => {
     const [food, setFood] = useState([])
     const fetchfood = async()=>{
-        const response = await axios.get(`http://themealdb.com/api/json/v1/1/categories.php`)
+        const response = await axios.get(`https://themealdb.com/api/json/v1/1/categories.php`)
         setFood(response.data?.categories)
     }
 
