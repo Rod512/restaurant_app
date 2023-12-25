@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import img from '../assets/biryani2.png'
 import axios from 'axios';
 
 const Menu = () => {
@@ -25,17 +24,19 @@ const Menu = () => {
                 aliquam soluta? Voluptatem, error?</p>
             </div>
 
-            <div className='container grid sm:grid-cols-3 grid-cols-1 gap-4'>
+            <div className='container grid sm:grid-cols-2 md:grid-cols-4 grid-cols-1 gap-14 md:gap-5 place-items-center py-10'>
             {/* Map through the food array and create a card for each item */}
             {
                 food?.map((item,key)=>(
-                    <div>
+                    <div className='max-w-[300px] h-[300px] group rounded-2xl bg-white dark:bg-gray-800 border'>
                         <div>
-                            <img src={item?.strCategoryThumb} alt="" />
+                            <img className='w-full' src={item?.strCategoryThumb} alt="" />
                         </div>
                         <div>
-                            <h4>{item?.strCategory}</h4>
-                            <p>{item?.strCategoryDescription}</p>
+                            <h4 className="font-bold text-center text-2xl text-primary">{item?.strCategory}</h4>
+                            <div className='flex justify-center py-8'>
+                                <button className='bg-gradient-to-r from-primary to-secondary text-white px-4 py-2 rounded-full hover:scale-105 duration-200'>Order Now</button>
+                            </div>
                         </div>
                     </div>
                 ))
